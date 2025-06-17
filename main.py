@@ -135,14 +135,14 @@ if __name__ == "__main__":
             the_table.auto_set_font_size(False)
             the_table.set_fontsize(9) 
             
-            the_table.scale(1.1, 1.2) 
+            the_table.scale(1.1, 1.7) 
 
             title_y_position = 1.05 
             if fig_height > 10: 
                  title_y_position = 1.01 
                  plt.subplots_adjust(top=0.97) 
 
-            plt.title(f'Tabela de Iterações (k, x^(k), Epsilon)', fontsize=12, y=title_y_position)
+            plt.title(f'Tabela de Iterações (k, x^(k), Epsilon)', fontsize=12, y=0.92)
 
             try:
                 plt.tight_layout()
