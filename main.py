@@ -98,8 +98,12 @@ if __name__ == "__main__":
     x_final, historico, distancias = jacobi(A_exemplo, b_exemplo, x0_exemplo, 
                                             tolerancia, maximo_iteracoes, 
                                             solucao_exata_exemplo)
+    
+    # 4) Plotar a solução aproximada X = [...., ....]
+    print(f"\n--- Solução Aproximada Final X ---")
+    print(f"X = {x_final}")
 
-    # 4) Gerar a tabela de iterações como uma figura
+    # 5) Gerar a tabela de iterações como uma figura
     print("\n--- Gerando Tabela de Iterações como Imagem ---")
     if historico:
         num_vars = len(historico[0][1]) 
@@ -151,10 +155,6 @@ if __name__ == "__main__":
             plt.show()
     else:
         print("Histórico de iterações está vazio, tabela não gerada.")
-
-    # 5) Plotar a solução aproximada X = [...., ....]
-    print(f"\n--- Solução Aproximada Final X ---")
-    print(f"X = {x_final}")
 
     # Plotar a convergência dos componentes de X
     plt.figure(figsize=(10, 6))
